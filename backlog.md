@@ -9,12 +9,12 @@
 ## 1. 文档补全
 
 - 补 `cases/boracay/transport.md`：机场、车船联运、酒店接送、岛上 tricycle。
-- 补 `cases/boracay/areas.md`：Station 1/2/3、Bulabog、Diniwid、北部区域。
 - 补 `cases/boracay/activities.md`：跳岛、日落帆船、按摩、陆地活动。
 - 补 `cases/boracay/data-sources.md`：记录可用信息源、字段和可信度。
 - 补 `docs/user-types.md`：用户类型标签，例如亲子、情侣、预算敏感、怕吵、英语弱。
 - 补 `docs/confidence.md`：置信度计算和展示规则。
 - 补 `docs/evidence.md`：证据分层、引用、时间戳和冲突处理。
+- 迭代 `cases/boracay/decision-examples.md`：增加酒店、交通、潜水三个方向的判断样本。
 
 ---
 
@@ -82,6 +82,7 @@
 - 收集 Station 1/2/3 各 10 家代表酒店。
 - 选 5 家中文用户常见酒店做判断卡。
 - 选 5 家潜店或潜水商品做判断卡。
+- 选 3 个典型用户场景做酒店短名单判断。
 - 记录 Caticlan 和 Kalibo 两条到岛路径。
 - 整理常见费用：接送、船票、环境税、码头费、tricycle。
 - 整理雨季、风季、旺季对活动和酒店体验的影响。

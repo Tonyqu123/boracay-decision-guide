@@ -128,13 +128,15 @@
 
 ## 5. 当前文档
 
+- [user-scenarios.md](./user-scenarios.md)：早期用户场景和判断入口。
+- [areas.md](./areas.md)：区域判断框架。
 - [hotels.md](./hotels.md)：酒店判断框架。
 - [diving.md](./diving.md)：潜水判断框架。
+- [decision-examples.md](./decision-examples.md)：区域选择的判断样本。
 
 后续可以继续补：
 
 - `transport.md`：机场、船、岛上交通判断框架。
-- `areas.md`：区域判断框架。
 - `activities.md`：跳岛、日落帆船、按摩等活动判断框架。
 - `data-sources.md`：信息源和采集记录。
 
