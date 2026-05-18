@@ -6,21 +6,30 @@
     <title>长滩岛住哪里？</title>
     <meta
       name="description"
-      content="回答 6 个问题，判断你更适合住在长滩岛哪个区域。"
+      content="回答 6 个问题，3 分钟判断你最适合住长滩岛哪个区域。"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <main class="app-shell">
-      <section class="intro" aria-labelledby="page-title">
-        <div class="intro-copy">
-          <p class="eyebrow">Boracay Area Finder</p>
-          <h1 id="page-title">长滩岛住哪里？</h1>
-          <p class="intro-line">
-            回答 6 个问题，得到一个住宿区域判断，再看几个酒店方向。
+  <body data-page="landing">
+    <header class="site-header">
+      <a class="brand" href="./">长滩岛住哪里</a>
+      <a class="header-link" href="./quiz/">开始测试</a>
+    </header>
+
+    <main>
+      <section class="hero-band">
+        <div class="hero-copy">
+          <p class="eyebrow">Boracay Stay Finder</p>
+          <h1>长滩岛住哪里？</h1>
+          <p class="hero-subtitle">
+            回答 6 个问题，3 分钟判断你最适合住哪个区域。少开 20 个标签页，少踩一次住宿坑。
           </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="./quiz/">开始测试</a>
+            <p>免费查看基础结论，完整版可解锁住宿决策卡。</p>
+          </div>
         </div>
-        <figure class="beach-photo">
+        <figure class="hero-photo">
           <img
             src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Station_1_beach%2C_boracay_island.jpg?width=1200"
             alt="长滩岛 Station 1 白沙滩"
@@ -29,67 +38,126 @@
         </figure>
       </section>
 
-      <section class="quiz-panel" aria-label="住宿区域问卷">
-        <div class="progress-row">
-          <span id="progressText">0 / 6</span>
-          <div class="progress-track" aria-hidden="true">
-            <div id="progressBar" class="progress-bar"></div>
-          </div>
+      <section class="trust-row" aria-label="产品定位">
+        <p>不是酒店大全。</p>
+        <p>不是泛泛攻略。</p>
+        <p>先排除不适合你的区域。</p>
+      </section>
+
+      <section class="content-band split-band">
+        <div>
+          <p class="eyebrow">Problem</p>
+          <h2>你不是不会选，是信息太碎了</h2>
         </div>
-
-        <form id="quizForm" class="quiz-form"></form>
-
-        <div class="actions">
-          <button id="resetButton" class="ghost-button" type="button">重选</button>
-          <button id="resultButton" class="primary-button" type="button" disabled>
-            看结果
-          </button>
+        <div class="long-copy">
+          <p>
+            长滩岛住宿看起来很简单：Station 1、Station 2、Station 3、Bulabog、Diniwid、Yapak。
+          </p>
+          <p>
+            但真正开始订酒店时，你会发现问题变成了：离白沙滩近吗？晚上会不会吵？去 D’Mall 方不方便？房间是不是偏旧？泳池好看但位置是不是尴尬？第一次去到底该不该住太偏？
+          </p>
+          <p>你当然可以自己查。只是可能会开 20 个标签页，然后越看越乱。</p>
+          <p class="strong-line">这个测试要做的事很简单：先帮你判断「你这种人」适合住哪里。</p>
         </div>
       </section>
 
-      <section id="resultPanel" class="result-panel" aria-live="polite" hidden>
-        <div class="result-header">
-          <p class="eyebrow">Result</p>
-          <h2>
-            你最适合住：
-            <span id="mainAreaName"></span>
-          </h2>
-          <p id="needSummary" class="need-summary"></p>
+      <section class="content-band">
+        <div class="section-heading">
+          <p class="eyebrow">How it works</p>
+          <h2>它怎么判断？</h2>
         </div>
-
-        <div class="result-grid">
-          <section class="result-block">
-            <h3>为什么是这里</h3>
-            <p id="reasonText"></p>
-          </section>
-
-          <section class="result-block compact-list">
-            <h3>备选</h3>
-            <ul id="backupList"></ul>
-          </section>
-
-          <section class="result-block compact-list">
-            <h3>不建议</h3>
-            <ul id="avoidList"></ul>
-          </section>
+        <div class="steps-grid">
+          <article class="info-card">
+            <span class="step-number">1</span>
+            <h3>回答 6 个问题</h3>
+            <p>你想要躺平、热闹、安静，还是水上项目？你最怕吵、远、旧，还是交通麻烦？</p>
+          </article>
+          <article class="info-card">
+            <span class="step-number">2</span>
+            <h3>识别真实需求</h3>
+            <p>你说的是“想住海边”，背后可能是：想少折腾、想要度假感、想降低踩坑概率。</p>
+          </article>
+          <article class="info-card">
+            <span class="step-number">3</span>
+            <h3>给出住宿区域建议</h3>
+            <p>告诉你最适合住哪里、备选哪里、哪些区域不建议优先看。</p>
+          </article>
         </div>
+      </section>
 
-        <section class="checks-block">
-          <h3>选酒店时重点看</h3>
-          <ol id="checkList"></ol>
-        </section>
+      <section class="content-band preview-band">
+        <div>
+          <p class="eyebrow">Preview</p>
+          <h2>你会得到什么？</h2>
+          <p class="muted-copy">不是按热度推荐，而是按你的后悔概率排序。</p>
+        </div>
+        <article class="sample-result">
+          <p class="sample-label">示例结果</p>
+          <h3>你最适合住：Station 1 靠 Station 2 的区域</h3>
+          <p><strong>你的真实需求是：</strong>经典白沙滩体验 + 吃饭方便 + 晚上不要太吵</p>
+          <p><strong>备选：</strong>Diniwid</p>
+          <p><strong>不建议：</strong>Station 2 核心区、Yapak 深处</p>
+        </article>
+      </section>
 
-        <section class="hotel-section">
-          <div class="section-heading">
-            <h3>酒店候选</h3>
-            <p>候选库是人工维护的初筛方向，预订前要重新看近一年评论、价格和取消政策。</p>
-          </div>
-          <div id="hotelList" class="hotel-list"></div>
-        </section>
+      <section class="content-band">
+        <div class="section-heading">
+          <p class="eyebrow">Free vs Full</p>
+          <h2>免费能看到什么？</h2>
+        </div>
+        <div class="compare-grid">
+          <article class="info-card">
+            <h3>免费基础结论</h3>
+            <ul class="plain-list">
+              <li>适合区域</li>
+              <li>真实需求总结</li>
+              <li>备选区域</li>
+              <li>不建议区域</li>
+            </ul>
+          </article>
+          <article class="info-card featured-card">
+            <h3>完整住宿决策卡</h3>
+            <p class="price-line">¥9.9</p>
+            <ul class="plain-list">
+              <li>完整判断理由</li>
+              <li>订酒店重点检查清单</li>
+              <li>3-5 个酒店初筛方向</li>
+              <li>每家酒店注意点</li>
+              <li>可下载 PDF / 图片结果卡</li>
+            </ul>
+          </article>
+        </div>
+        <a class="primary-button section-cta" href="./quiz/">先免费测一下</a>
+      </section>
+
+      <section class="content-band faq-band">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>常见问题</h2>
+        </div>
+        <details>
+          <summary>这是 AI 自动推荐酒店吗？</summary>
+          <p>不是简单把酒店按评分排序。它会先根据你的回答判断适合的住宿区域，再给出初筛方向。酒店候选库会尽量保持人工维护，避免纯 AI 瞎编。</p>
+        </details>
+        <details>
+          <summary>适合什么人？</summary>
+          <p>适合第一次去长滩岛、懒得做大量功课、但又不想随便订酒店的人。尤其适合情侣、朋友出行、带父母或孩子、预算不低但怕花冤枉钱的人。</p>
+        </details>
+        <details>
+          <summary>不适合什么人？</summary>
+          <p>如果你已经非常熟悉长滩岛，或者只想找最低价酒店，这个测试可能不是最适合你。</p>
+        </details>
+        <details>
+          <summary>推荐结果一定准确吗？</summary>
+          <p>它不是保证你一定订到完美酒店，而是帮你快速缩小选择范围，减少明显踩坑。预订前仍建议查看近一年评论、实时价格和取消政策。</p>
+        </details>
+      </section>
+
+      <section class="final-cta">
+        <h2>先别急着看 100 家酒店</h2>
+        <p>先花 3 分钟判断：你到底适合住长滩岛哪里。</p>
+        <a class="primary-button" href="./quiz/">开始 6 题测试</a>
       </section>
     </main>
-
-    <script src="./data/boracay-hotels.js"></script>
-    <script src="./app.js"></script>
   </body>
 </html>
