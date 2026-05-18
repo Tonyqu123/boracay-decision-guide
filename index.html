@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>长滩岛住哪里？</title>
+    <meta
+      name="description"
+      content="回答 6 个问题，判断你更适合住在长滩岛哪个区域。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow">Boracay Area Finder</p>
+          <h1 id="page-title">长滩岛住哪里？</h1>
+          <p class="intro-line">
+            回答 6 个问题，得到一个住宿区域判断，再看几个酒店方向。
+          </p>
+        </div>
+        <figure class="beach-photo">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Station_1_beach%2C_boracay_island.jpg?width=1200"
+            alt="长滩岛 Station 1 白沙滩"
+          />
+          <figcaption>Photo: Tirakatol / Wikimedia Commons</figcaption>
+        </figure>
+      </section>
+
+      <section class="quiz-panel" aria-label="住宿区域问卷">
+        <div class="progress-row">
+          <span id="progressText">0 / 6</span>
+          <div class="progress-track" aria-hidden="true">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+        </div>
+
+        <form id="quizForm" class="quiz-form"></form>
+
+        <div class="actions">
+          <button id="resetButton" class="ghost-button" type="button">重选</button>
+          <button id="resultButton" class="primary-button" type="button" disabled>
+            看结果
+          </button>
+        </div>
+      </section>
+
+      <section id="resultPanel" class="result-panel" aria-live="polite" hidden>
+        <div class="result-header">
+          <p class="eyebrow">Result</p>
+          <h2>
+            你最适合住：
+            <span id="mainAreaName"></span>
+          </h2>
+          <p id="needSummary" class="need-summary"></p>
+        </div>
+
+        <div class="result-grid">
+          <section class="result-block">
+            <h3>为什么是这里</h3>
+            <p id="reasonText"></p>
+          </section>
+
+          <section class="result-block compact-list">
+            <h3>备选</h3>
+            <ul id="backupList"></ul>
+          </section>
+
+          <section class="result-block compact-list">
+            <h3>不建议</h3>
+            <ul id="avoidList"></ul>
+          </section>
+        </div>
+
+        <section class="checks-block">
+          <h3>选酒店时重点看</h3>
+          <ol id="checkList"></ol>
+        </section>
+
+        <section class="hotel-section">
+          <div class="section-heading">
+            <h3>酒店候选</h3>
+            <p>候选库是人工维护的初筛方向，预订前要重新看近一年评论、价格和取消政策。</p>
+          </div>
+          <div id="hotelList" class="hotel-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./data/boracay-hotels.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
